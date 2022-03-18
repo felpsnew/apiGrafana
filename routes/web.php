@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\webhookController;
  
 
 /*
@@ -20,5 +20,25 @@ Route::get('/', function () {
 
 });
 
+
 //controlador do webhook
-//Route::post('webhooks', webhookController::class);
+Route::post('/web', [webhookController::class, 'teste']);
+
+Route::post('webs', function(Request $request) {
+
+
+    return dd($request->all());
+
+    /*
+    $armazenaStatus = new armazena_status;
+
+    $armazenaStatus->email = "asdas";
+    $armazenaStatus->status = "ativo";
+    $armazenaStatus->save();
+
+    return "OK";
+    */
+    
+    //dd($request->all());
+
+});

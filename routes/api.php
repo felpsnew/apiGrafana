@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+
+//controlador do webhook
+Route::get('/web', [App\Http\Controllers\webhookController::class, 'teste']);
