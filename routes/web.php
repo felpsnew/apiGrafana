@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\webhookController;
+use Illuminate\Http\Request;
  
 
 /*
@@ -22,23 +23,9 @@ Route::get('/', function () {
 
 
 //controlador do webhook
-Route::post('/web', [webhookController::class, 'teste']);
-
-Route::post('webs', function(Request $request) {
+Route::post('/web', 'App\Http\Controllers\webhookController@teste');
 
 
-    return dd($request->all());
-
-    /*
-    $armazenaStatus = new armazena_status;
-
-    $armazenaStatus->email = "asdas";
-    $armazenaStatus->status = "ativo";
-    $armazenaStatus->save();
-
-    return "OK";
-    */
-    
-    //dd($request->all());
-
+Route::post('/webs', function(Request $request) {
+    dd($request->code());
 });

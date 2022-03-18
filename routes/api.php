@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\webhookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,5 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 
 
-//controlador do webhook
-Route::get('/web', [App\Http\Controllers\webhookController::class, 'teste']);
+Route::post('/webs','App\Http\Controllers\webhookController@teste');

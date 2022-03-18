@@ -11,17 +11,8 @@ class webhookController extends Controller
     public function teste (Request $request) {
 
 
-        dd("oi");
+        return "AQUI";
 
-
-        $armazenaStatus = new armazena_status;
-
-        $armazenaStatus->email = "asdas";
-        $armazenaStatus->status = "ativo";
-        $armazenaStatus->save();
-        
-        return "oi";
-        //dd($request->all());
 
 
     }
