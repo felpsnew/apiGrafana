@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class armazena_status extends Model
+class status_count extends Model
 {
     use HasFactory;
-    protected $fillable = ['email', 'status','id'];
-
+    protected $fillable = ['id', 'status','count'];
 }

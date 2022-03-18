@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('armazena_statuses', function (Blueprint $table) {
             $table->id();
+            $table->String('email')->nullable();
+            $table->String('status')->nullable();
             $table->timestamps();
         });
     }
